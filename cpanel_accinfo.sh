@@ -14,12 +14,12 @@ for i in "${users[@]}"; do
 echo "$red ####################################### $white"
 echo "$grn ##Main domain of user ${i}"
 echo "=============="
-cat /etc/userdatadomains | grep mwalters | grep main | awk '{print $1}' | tr -d :
+cat /etc/userdatadomains | grep $i | grep main | awk '{print $1}' | tr -d :
 echo "$cyn ##Addon domains of user ${i}"
 echo "=============="
-cat /etc/userdatadomains | grep mwalters | grep addon | awk '{print $1}' | tr -d :
+cat /etc/userdatadomains | grep $i | grep addon | awk '{print $1}' | tr -d :
 echo "$blu ##Subdomains of user ${i}"
 echo "=============="
-cat /etc/userdatadomains | grep mwalters | grep sub | awk '{print $1}' | tr -d :
+cat /etc/userdatadomains | grep $i | grep sub | awk '{print $1}' | tr -d :
 done
 echo "$white Thank you"
